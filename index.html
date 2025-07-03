@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- fuente de iconos -->
+    <link rel="stylesheet" href="https://unpkg.com/css-wand/dist/wand.min.css" /> <!-- libreria de estilo para mi boton -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"> 
+    <title>Portafolio Natalia Almada</title>
+</head>
+<body>
+<!-- Barra de navegación fija -->
+    <header class="navbar">
+        <nav>
+          <a href="#">
+          <img src="img/android-chrome-512x512.png" alt="Logo" class="logo">
+          </a>
+          <div class="contenedor-menu">
+              <!-- Input checkbox oculto -->
+              <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+              <!-- Label actúa como botón hamburguesa -->
+              <label for="menu-toggle" class="hamburguesa">&#9776;</label>
+        
+              <ul class="menu">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+              </ul>
+          </div>    
+
+        </nav>
+      </header>   
+
+  <!-- Sección Sobre mí -->
+<section id="sobre-mi" class="fondo-difuminado">
+    <h1 class="titulo-seccion">Bienvenid@ a mi portafolio</h1>
+    
+    <div class="contenedor-sobre-mi">
+        <h2>Sobre mi</h2>
+        <p>Soy desarrolladora en formación con enfoque en desarrollo web, interesada en adquirir experiencia tanto en frontend como en backend. <br>
+           Actualmente me encuentro estudiando y realizando cursos para fortalecer mis habilidades técnicas y construir un perfil completo.</p>
+        <a href="#proyectos" class="btn-proyectos">Ver proyectos</a>
+      </div>
+</section>
+
+<!-- Sección Proyectos-->
+<section id="proyectos">
+    <h2>Proyectos</h2>
+    <p>Alguno de los diseños en los que trabaje y puse en práctica mis conocimientos.</p>
+    <div class="contenedor-proyectos">
+  
+      <div class="tarjeta">
+        <a href="https://enlace-a-tu-proyecto.com" target="_blank">
+            <div class="image" style="background-image: url('img/proyecto01.png');"></div>
+        </a>
+        <div class="content">
+          <h3 class="title">Mi Portafolio</h3>
+          <p class="desc">Portafolio personal responsive hecho con HTML y CSS para mostrar mis proyectos y perfil profesional.</p>
+        </div>
+      </div>
+  
+      <div class="tarjeta">
+        <a href="https://enlace-a-tu-proyecto.com" target="_blank">
+            <div class="image" style="background-image: url('');"></div>
+        </a>
+        <div class="content">
+          <h3 class="title">Nombre del proyecto</h3>
+          <p class="desc">Descripción.</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <a href="https://enlace-a-tu-proyecto.com" target="_blank">
+            <div class="image" style="background-image: url('');"></div>
+        </a>
+        <div class="content">
+          <h3 class="title">Nombre del proyecto</h3>
+          <p class="desc">Descripción.</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <a href="https://enlace-a-tu-proyecto.com" target="_blank">
+            <div class="image" style="background-image: url('');"></div>
+        </a>
+        <div class="content">
+          <h3 class="title">Nombre del proyecto</h3>
+          <p class="desc">Descripción.</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+<!-- Seccion contacto-Habilidades -->
+  <section id="contacto">
+    <h2>Contacto-Habilidades</h2>
+    <p>almadagomeznatalia@gmail.com</p>
+    <div class="contenedor-principal-contacto"> 
+
+      <div class="contenedor-contacto"> <!-- Habilidades -->
+        <h3>Herramientas/Tecnologías utilizadas</h3>
+        <p>HTML5| CSS3| Git| GitHub| PostgreSQL| MySQL| JavaScript| C++| Visual Studio Code|
+          NetBeans|</p>
+        <h3>Estoy aprendiendo</h3>
+        <p>React| Java| Nodejs| MongoDB| Postman|</p>
+      </div>
+
+      <div class="contenedor-contacto iconos-redes"><!-- Iconos contacto -->
+        <a href="https://www.linkedin.com/in/nataliaalgomez/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin fa-3x"></i>
+        </a>
+        <a href="mailto:almadagomeznatalia@gmail.com" aria-label="Gmail">
+          <i class="fas fa-envelope fa-3x"></i>
+        </a>
+        <a href="https://github.com/NataliaAl24" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github fa-3x"></i>
+        </a>
+      </div>
+  
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Natalia Almada.</p>
+  </footer>
+</body>
+</html>
