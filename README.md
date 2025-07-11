@@ -1,9 +1,10 @@
 # PortafolioPersonal
-Este es mi portafolio personal responsive hecho con HTML y CSS para mostrar mis proyectos y perfil profesional.
+Este es mi portafolio personal responsive hecho con HTML, CSS Y JAVASCRIPT para mostrar mis proyectos y perfil profesional.
 
 ## Tecnologías utilizadas
 - HTML5
 - CSS3
+- JAVASCRIPT
 
 ## Cómo verlo
 Abrir `index.html` en un navegador o visitar el [sitio web](https://nataliaal24.github.io/PortafolioPersonal/).  
