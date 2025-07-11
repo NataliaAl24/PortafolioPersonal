@@ -130,5 +130,27 @@
   <footer>
     <p>&copy; 2025 Natalia Almada.</p>
   </footer>
+
+  <!-- javaScript para que el menu desplegable se quite al hacer scroll -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.menu');
+  
+    // Para cerrar el menú al hacer clic por fuera
+    document.addEventListener('click', function (e) {
+      const isClickInsideMenu = menu.contains(e.target);
+      const isClickOnToggle = toggle.contains(e.target);
+  
+      if (!isClickInsideMenu && !isClickOnToggle) {
+        toggle.checked = false;
+      }
+    });
+  
+    // Para cerrar el menú al hacer scroll
+    window.addEventListener('scroll', function () {
+      toggle.checked = false;
+    });
+  </script>
+  
 </body>
 </html>
