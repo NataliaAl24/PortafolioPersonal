@@ -1,156 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- fuente de iconos -->
-    <link rel="stylesheet" href="https://unpkg.com/css-wand/dist/wand.min.css" /> <!-- libreria de estilo para mi boton -->
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
     <title>Portafolio Natalia Almada</title>
 </head>
 <body>
-<!-- Barra de navegación fija -->
-    <header class="navbar">
-        <nav>
-          <a href="#">
-          <img src="img/android-chrome-512x512.png" alt="Logo" class="logo">
-          </a>
-          <div class="contenedor-menu">
-              <!-- Input checkbox oculto -->
-              <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
-              <!-- Label actúa como botón hamburguesa -->
-              <label for="menu-toggle" class="hamburguesa">&#9776;</label>
-        
-              <ul class="menu">
+<!-- NAV -->
+<header class="navbar">
+    <nav>
+        <a href="#">
+            <img src="imagenes/android-chrome-512x512.png" alt="Logo" class="logo">
+        </a>
+        <div class="contenedor-menu">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburguesa">&#9776;</label>
+            <ul class="menu">
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#certificados">Certificados</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-              </ul>
-          </div>    
+            </ul>
+        </div>
+    </nav>
+</header>
 
-        </nav>
-      </header>   
-
-  <!-- Sección Sobre mí -->
+<!-- HERO / SOBRE MÍ -->
 <section id="sobre-mi" class="fondo-difuminado">
-    <h1 class="titulo-seccion">Bienvenid@ a mi portafolio</h1>
-    
+    <h1 class="titulo-seccion">Hola, soy Natalia</h1>
+    <div class="badge-disponible">
+        <span class="badge-dot"></span>
+        Disponible para trabajar
+    </div>
+
     <div class="contenedor-sobre-mi">
-        <h2>Sobre mi</h2>
-        <p>Soy desarrolladora web en formación constante, con muchas ganas de seguir aprendiendo y crecer tanto en frontend como en backend.<br>
-          Actualmente estudio y hago cursos para mejorar mis habilidades técnicas y armar un perfil cada vez más completo.</p>
-        <a href="#proyectos" class="btn-proyectos">Ver proyectos</a>
-      </div>
+        <h2>Sobre mí</h2>
+        <p>Mi formación técnica comenzó en el desarrollo de aplicaciones web, lo que me permitió comprender la arquitectura y el funcionamiento interno de los sistemas. Posteriormente, incorporé el análisis de datos para mejorar la interpretación de grandes volúmenes de información en entornos operativos. 
+        Actualmente, me especializo en ciberdefensa, integrando estos conocimientos previos para identificar vulnerabilidades y mitigar riesgos. Busco mi primera experiencia formal en el sector para aplicar esta visión técnica integral.</p>
+
+        <div class="chips-perfil">
+            <span class="chip">Full Stack</span>
+            <span class="chip azul">Ciberdefensa en curso</span>
+        </div>
+
+        <a href="#proyectos" class="btn-proyectos">Ver proyectos ↓</a>
+    </div>
 </section>
 
-<!-- Sección Proyectos-->
+<!-- PROYECTOS -->
 <section id="proyectos">
     <h2>Proyectos</h2>
-    <p>Alguno de los diseños en los que trabaje y puse en práctica mis conocimientos.</p>
+    <p>Algunos de los proyectos en los que puse en práctica mis conocimientos.</p>
+
     <div class="contenedor-proyectos">
-  
-      <div class="tarjeta">
-        <a href="https://nataliaal24.github.io/PortafolioPersonal/" target="_blank">
-            <div class="image" style="background-image: url('img/proyecto01.png');"></div>
-        </a>
-        <div class="content">
-          <h3 class="title">Mi Portafolio</h3>
-          <p class="desc">Portafolio personal responsive hecho con HTML y CSS para mostrar mis proyectos y perfil profesional.</p>
-        </div>
-      </div>
-  
-      <div class="tarjeta">
-        <a href="https:" target="_blank">
-            <div class="image" style="background-image: url('');"></div>
-        </a>
-        <div class="content">
-          <h3 class="title">Nombre del proyecto</h3>
-          <p class="desc">Descripción.</p>
-        </div>
-      </div>
 
-      <div class="tarjeta">
-        <a href="https://" target="_blank">
-            <div class="image" style="background-image: url('');"></div>
-        </a>
-        <div class="content">
-          <h3 class="title">Nombre del proyecto</h3>
-          <p class="desc">Descripción.</p>
+        <div class="tarjeta">
+            <a href="https://nataliaal24.github.io/PortafolioPersonal/" target="_blank">
+                <div class="image" style="background-image: url('imagenes/proyecto02.png');"></div>
+            </a>
+            <div class="content">
+                <h3 class="title">Mi Portafolio</h3>
+                <p class="desc">Sitio web personal responsive construido desde cero con HTML y CSS. Desplegado en GitHub Pages.</p>
+            </div>
+            <div class="tarjeta-tags">
+                <span class="tarjeta-tag">HTML5</span>
+                <span class="tarjeta-tag">CSS3</span>
+                <span class="tarjeta-tag">Responsive</span>
+            </div>
+            <a href="https://nataliaal24.github.io/PortafolioPersonal/" target="_blank" class="tarjeta-link">Ver demo ↗</a>
         </div>
-      </div>
 
-      <div class="tarjeta">
-        <a href="https:" target="_blank">
-            <div class="image" style="background-image: url('');"></div>
-        </a>
-        <div class="content">
-          <h3 class="title">Nombre del proyecto</h3>
-          <p class="desc">Descripción.</p>
+        <!-- Proyecto 2: reemplazá con tu proyecto real -->
+        <div class="tarjeta proximamente">
+            <div class="image vacia"></div>
+            <div class="content">
+                <h3 class="title">Próximamente</h3>
+                <p class="desc">Próximo proyecto acá.</p>
+            </div>
+            <div class="tarjeta-tags">
+                <span class="tarjeta-tag">En desarrollo</span>
+            </div>
         </div>
-      </div>
-  
+
     </div>
-  </section>
+</section>
 
-<!-- Seccion contacto-Habilidades -->
-  <section id="contacto">
-    <h2>Contacto-Habilidades</h2>
-    <p>almadagomeznatalia@gmail.com</p>
-    <div class="contenedor-principal-contacto"> 
+<!-- HABILIDADES -->
+<section id="habilidades">
+    <h2>Habilidades</h2>
+    <p>Mi stack técnico actual y las tecnologías que estoy incorporando.</p>
 
-      <div class="contenedor-contacto"> <!-- Habilidades -->
-        <h3>Herramientas utilizadas</h3>
-        <p>Lenguajes de programación: HTML5, CSS3, JavaScript, C++. <br>
-          Frameworks y entornos de ejecución: React, Node.js. <br>
-          Bases de datos: MySQL, PostgreSQL, MongoDB. <br>
-          Herramientas y plataformas: Git, GitHub, Postman. <br>
-          Entornos de desarrollo: Visual Studio Code, NetBeans. <br>
-        </p>
-      </div>
-
-      <div class="contenedor-contacto iconos-redes"><!-- Iconos contacto -->
-        <a href="https://www.linkedin.com/in/nataliaalgomez/" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin fa-3x"></i>
-        </a>
-        <a href="mailto:almadagomeznatalia@gmail.com" aria-label="Gmail">
-          <i class="fas fa-envelope fa-3x"></i>
-        </a>
-        <a href="https://github.com/NataliaAl24" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github fa-3x"></i>
-        </a>
-      </div>
-  
+    <div class="skills-grid">
+        <div class="skill-card">
+            <div class="skill-card-titulo">Frontend</div>
+            <ul class="skill-lista">
+                <li>HTML5 · CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React</li>
+                <li>Diseño responsive</li>
+            </ul>
+        </div>
+        <div class="skill-card azul">
+            <div class="skill-card-titulo">Backend</div>
+            <ul class="skill-lista">
+                <li>Node.js</li>
+                <li>C++</li>
+                <li>REST APIs</li>
+                <li>Postman</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <div class="skill-card-titulo">Bases de datos</div>
+            <ul class="skill-lista">
+                <li>MySQL · PostgreSQL</li>
+                <li>NoSQL MongoDB</li>
+                <li>Excel · Google Sheets</li>
+            </ul>
+        </div>
+        <div class="skill-card verde">
+            <div class="skill-card-titulo">Herramientas</div>
+            <ul class="skill-lista">
+                <li>Git · GitHub</li>
+                <li>VS Code · NetBeans</li>
+                <li>Slack</li>
+            </ul>
+            <p class="skill-nota">En formación: Ciberdefensa</p>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Natalia Almada.</p>
-  </footer>
+<!-- CERTIFICADOS -->
+<section id="certificados">
+    <h2>Certificados</h2>
+    <p>Formación complementaria y cursos completados.</p>
 
-  <!-- javaScript para que el menu desplegable se quite al hacer scroll -->
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.querySelector('.menu');
-  
-    // Para cerrar el menú al hacer clic por fuera
-    document.addEventListener('click', function (e) {
-      const isClickInsideMenu = menu.contains(e.target);
-      const isClickOnToggle = toggle.contains(e.target);
-  
-      if (!isClickInsideMenu && !isClickOnToggle) {
-        toggle.checked = false;
-      }
-    });
-  
-    // Para cerrar el menú al hacer scroll
-    window.addEventListener('scroll', function () {
-      toggle.checked = false;
-    });
-  </script>
-  
+    <div class="cert-grid">
+
+        <a href="https://www.coursera.org/account/accomplishments/verify/HNSSCI46MFG4" target="_blank" class="cert-item">
+            <div class="cert-img" style="background-image: url('imagenes/CertificadoCiberseguridad01.png');"></div>
+            <div class="cert-overlay">Ver certificado ↗</div>
+        </a>
+
+        <a href="https://www.educacionit.com/perfil/natalia-almada-1004889/certificado/73665" target="_blank" class="cert-item">
+            <div class="cert-img" style="background-image: url('imagenes/jsDesdeCero02.png');"></div>
+            <div class="cert-overlay">Ver certificado ↗</div>
+        </a>
+
+        <a href="imagenes/cert03.png" target="_blank" class="cert-item">
+            <div class="cert-img" style="background-image: url('imagenes/cert03.png');"></div>
+            <div class="cert-overlay">Ver certificado ↗</div>
+        </a>
+
+        <a href="imagenes/cert04.png" target="_blank" class="cert-item">
+            <div class="cert-img" style="background-image: url('imagenes/cert04.png');"></div>
+            <div class="cert-overlay">Ver certificado ↗</div>
+        </a>
+
+        <a href="imagenes/cert05.png" target="_blank" class="cert-item">
+            <div class="cert-img" style="background-image: url('imagenes/cert05.png');"></div>
+            <div class="cert-overlay">Ver certificado ↗</div>
+        </a>
+
+        <a href="imagenes/cert06.png" target="_blank" class="cert-item">
+            <div class="cert-img" style="background-image: url('imagenes/cert06.png');"></div>
+            <div class="cert-overlay">Ver certificado ↗</div>
+        </a>
+
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tenés una oportunidad o querés charlar? Escribime.</p>
+
+    <div class="contenedor-principal-contacto">
+
+        <div class="contenedor-contacto">
+            <h3>Info</h3>
+            <div class="info-fila">
+                <span class="info-label">email</span>
+                <a href="mailto:almadagomeznatalia@gmail.com" class="email-link">almadagomeznatalia@gmail.com</a>
+            </div>
+            <div class="info-fila">
+                <span class="info-label">ubicación</span>
+                <span class="info-valor">Buenos Aires, Argentina</span>
+            </div>
+            <div class="info-fila">
+                <span class="info-label">modalidad</span>
+                <span class="info-valor">Remoto · Híbrido · Presencial</span>
+            </div>
+            <div class="info-fila">
+                <span class="info-label">disponibilidad</span>
+                <span class="info-valor disponible">Inmediata ✓</span>
+            </div>
+        </div>
+
+        <div class="contenedor-contacto iconos-redes">
+            <a href="https://www.linkedin.com/in/nataliaalgomez/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin fa-3x"></i>
+            </a>
+            <a href="mailto:almadagomeznatalia@gmail.com" aria-label="Gmail">
+                <i class="fas fa-envelope fa-3x"></i>
+            </a>
+            <a href="https://github.com/NataliaAl24" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github fa-3x"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2025 Natalia Almada · Full Stack Developer</p>
+</footer>
+
+<script src="app.js"></script>
+
 </body>
 </html>
