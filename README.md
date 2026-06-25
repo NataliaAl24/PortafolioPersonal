@@ -20,7 +20,7 @@ https://nataliaal24.github.io/PortafolioPersonal
 
 ## Contacto
 LinkedIn: linkedin.com/in/nataliaalgomez
-Email: almadagomeznatalia@gmail.com
+Email: nataliaalmadagomez@gmail.com
 
 ## Correr localmente
 1. Cloná el repositorio: `git clone https://github.com/NataliaAl24/PortafolioPersonal.git`
