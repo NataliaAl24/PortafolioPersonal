@@ -18,8 +18,8 @@
             <img src="imagenes/android-chrome-512x512.png" alt="Logo" class="logo">
         </a>
         <div class="contenedor-menu">
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="hamburguesa">&#9776;</label>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" autocomplete="off">
+            <label for="menu-toggle" class="hamburguesa" aria-label="Abrir menú"></label>
             <ul class="menu">
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
@@ -27,6 +27,7 @@
                 <li><a href="#certificados">Certificados</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+            <div class="menu-backdrop"></div>
         </div>
     </nav>
 </header>
@@ -34,16 +35,12 @@
 <!-- HERO / SOBRE MÍ -->
 <section id="sobre-mi" class="fondo-difuminado">
     <h1 class="titulo-seccion">Hola, soy Natalia</h1>
-    <div class="badge-disponible">
-        <span class="badge-dot"></span>
-        Disponible para trabajar
-    </div>
+    
 
     <div class="contenedor-sobre-mi">
         <h2>Sobre mí</h2>
-        <p>Mi formación técnica comenzó en el desarrollo de aplicaciones web, lo que me permitió comprender la arquitectura y el funcionamiento interno de los sistemas. Posteriormente, incorporé el análisis de datos para mejorar la interpretación de grandes volúmenes de información en entornos operativos. 
-        Actualmente, me especializo en ciberdefensa, integrando estos conocimientos previos para identificar vulnerabilidades y mitigar riesgos. Busco mi primera experiencia formal en el sector para aplicar esta visión técnica integral.</p>
-
+        <p>Mi formación técnica comenzó en el desarrollo de aplicaciones web, lo que me permitió comprender la arquitectura y el funcionamiento interno de los sistemas. Actualmente me especializo en ciberseguridad, aplicando esa base para identificar vulnerabilidades y mitigar riesgos. Busco mi primera experiencia formal en el sector, donde pueda aportar tanto desde el desarrollo como desde la seguridad.</p>
+        
         <div class="chips-perfil">
             <span class="chip">Full Stack</span>
             <span class="chip azul">Ciberdefensa en curso</span>
@@ -60,7 +57,7 @@
 
     <div class="contenedor-proyectos">
 
-        <div class="tarjeta">
+        <div class="tarjeta"> <!-- tarjeta de proyecto dev -->
             <a href="https://nataliaal24.github.io/PortafolioPersonal/" target="_blank">
                 <div class="image" style="background-image: url('imagenes/proyecto02.png');"></div>
             </a>
@@ -76,7 +73,22 @@
             <a href="https://nataliaal24.github.io/PortafolioPersonal/" target="_blank" class="tarjeta-link">Ver demo ↗</a>
         </div>
 
-        <!-- Proyecto 2: reemplazá con tu proyecto real -->
+        <div class="tarjeta"> <!-- tarjeta de proyecto ciber -->
+            <a href="LINK-DEL-PROYECTO" target="_blank">
+                <div class="image" style="background-image: url('imagenes/proyecto-ciber.png');"></div>
+            </a>
+            <div class="content">
+                <h3 class="title">Nombre del proyecto</h3>
+                <p class="desc">Descripción del proyecto.</p>
+            </div>
+            <div class="tarjeta-tags">
+                <span class="tarjeta-tag ciber">Ciberseguridad</span>
+                <span class="tarjeta-tag ciber">Python</span>
+            </div>
+            <a href="LINK-DEL-PROYECTO" target="_blank" class="tarjeta-link">Ver proyecto ↗</a>
+        </div>
+
+        <!-- Proyecto 2: -->
         <div class="tarjeta proximamente">
             <div class="image vacia"></div>
             <div class="content">
@@ -138,41 +150,46 @@
 <!-- CERTIFICADOS -->
 <section id="certificados">
     <h2>Certificados</h2>
-    <p>Formación complementaria y cursos completados.</p>
 
-    <div class="cert-grid">
+    <h3 class="cert-categoria">Ciberseguridad</h3>
+<div class="cert-grid">
 
-        <a href="https://www.coursera.org/account/accomplishments/verify/HNSSCI46MFG4" target="_blank" class="cert-item">
-            <div class="cert-img" style="background-image: url('imagenes/CertificadoCiberseguridad01.png');"></div>
-            <div class="cert-overlay">Ver certificado ↗</div>
-        </a>
+    <a href="https://www.coursera.org/account/accomplishments/verify/HNSSCI46MFG4" target="_blank" class="cert-item">
+        <div class="cert-img" style="background-image: url('imagenes/CertificadoCiberseguridad01.png');"></div>
+        <div class="cert-overlay">Ver certificado ↗</div>
+    </a>
 
-        <a href="https://www.educacionit.com/perfil/natalia-almada-1004889/certificado/73665" target="_blank" class="cert-item">
-            <div class="cert-img" style="background-image: url('imagenes/jsDesdeCero02.png');"></div>
-            <div class="cert-overlay">Ver certificado ↗</div>
-        </a>
+    <a href="imagenes/cert03.png" target="_blank" class="cert-item">
+        <div class="cert-img" style="background-image: url('imagenes/cert03.png');"></div>
+        <div class="cert-overlay">Ver certificado ↗</div>
+    </a>
 
-        <a href="imagenes/cert03.png" target="_blank" class="cert-item">
-            <div class="cert-img" style="background-image: url('imagenes/cert03.png');"></div>
-            <div class="cert-overlay">Ver certificado ↗</div>
-        </a>
+    <a href="imagenes/cert04.png" target="_blank" class="cert-item">
+        <div class="cert-img" style="background-image: url('imagenes/cert04.png');"></div>
+        <div class="cert-overlay">Ver certificado ↗</div>
+    </a>
 
-        <a href="imagenes/cert04.png" target="_blank" class="cert-item">
-            <div class="cert-img" style="background-image: url('imagenes/cert04.png');"></div>
-            <div class="cert-overlay">Ver certificado ↗</div>
-        </a>
+</div>
 
-        <a href="imagenes/cert05.png" target="_blank" class="cert-item">
-            <div class="cert-img" style="background-image: url('imagenes/cert05.png');"></div>
-            <div class="cert-overlay">Ver certificado ↗</div>
-        </a>
+<h3 class="cert-categoria">Desarrollo Web</h3>
+<div class="cert-grid">
 
-        <a href="imagenes/cert06.png" target="_blank" class="cert-item">
-            <div class="cert-img" style="background-image: url('imagenes/cert06.png');"></div>
-            <div class="cert-overlay">Ver certificado ↗</div>
-        </a>
+    <a href="https://www.educacionit.com/perfil/natalia-almada-1004889/certificado/73665" target="_blank" class="cert-item">
+        <div class="cert-img" style="background-image: url('imagenes/jsDesdeCero02.png');"></div>
+        <div class="cert-overlay">Ver certificado ↗</div>
+    </a>
 
-    </div>
+    <a href="imagenes/cert05.png" target="_blank" class="cert-item">
+        <div class="cert-img" style="background-image: url('imagenes/cert05.png');"></div>
+        <div class="cert-overlay">Ver certificado ↗</div>
+    </a>
+
+    <a href="imagenes/cert06.png" target="_blank" class="cert-item">
+        <div class="cert-img" style="background-image: url('imagenes/cert06.png');"></div>
+        <div class="cert-overlay">Ver certificado ↗</div>
+    </a>
+
+</div>
 </section>
 
 <!-- CONTACTO -->
@@ -219,10 +236,11 @@
 
 <!-- FOOTER -->
 <footer>
-    <p>&copy; 2025 Natalia Almada · Full Stack Developer</p>
+    <p>&copy; 2026 Natalia Almada ·</p>
 </footer>
 
 <script src="app.js"></script>
 
 </body>
 </html>
+

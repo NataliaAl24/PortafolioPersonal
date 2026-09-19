@@ -61,13 +61,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-#proyectos h2,
-#habilidades h2,
-#certificados h2,
-#contacto h2 {
-    margin-top: 80px;
-}
-
 p {
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
@@ -127,22 +120,57 @@ p {
     display: none;
 }
 
+.menu-backdrop {
+    display: none;
+}
+
+/* ============================================================
+   HAMBURGUESA (ícono que se convierte en X)
+   ============================================================ */
 .hamburguesa {
     display: none;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: #f5f5f5;
-    cursor: pointer;
+    width: 28px;
+    height: 22px;
     position: relative;
-    right: 20px;
-    z-index: 1100;
+    cursor: pointer;
+    z-index: 1600;
+}
+
+.hamburguesa::before,
+.hamburguesa::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #f5f5f5;
+    border-radius: 2px;
+    transition: transform 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburguesa::before {
+    top: 4px;
+    box-shadow: 0 8px 0 #f5f5f5;
+}
+
+.hamburguesa::after {
+    top: 20px;
+}
+
+.menu-toggle:checked ~ .hamburguesa::before {
+    top: 10px;
+    transform: rotate(45deg);
+    box-shadow: 0 0 0 transparent;
+}
+
+.menu-toggle:checked ~ .hamburguesa::after {
+    top: 10px;
+    transform: rotate(-45deg);
 }
 
 @media screen and (max-width: 768px) {
     .hamburguesa {
         display: block;
-        right: 0;
     }
 
     .contenedor-menu {
@@ -161,22 +189,68 @@ p {
         margin-left: 10px;
     }
 
+    /* MENÚ LATERAL DESLIZANTE (estilo GitHub / apps) */
     .menu {
-        display: none;
+        list-style: none;
+        display: flex;
         flex-direction: column;
-        background: rgba(40, 75, 89, 0.95);
-        position: absolute;
-        top: 64px;
+        gap: 4px;
+        background: var(--fondo-oscuro);
+        border-left: 1px solid var(--glass-border);
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0.4);
+        position: fixed;
+        top: 0;
         right: 0;
-        width: 170px;
-        padding: 20px;
-        z-index: 1000;
-        border-radius: 5px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        height: 100vh;
+        width: min(260px, 75vw);
+        z-index: 1500;
+        margin: 0;
+        padding: 100px 14px 24px;
+        transform: translateX(100%);
+        visibility: hidden;
+        pointer-events: none;
+        transition: transform 0.3s ease, visibility 0.3s;
+        overflow-y: auto;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu li a {
+        display: block;
+        font-size: 17px;
+        padding: 14px 12px;
+        border-radius: 8px;
+    }
+
+    .menu li a:hover {
+        background: rgba(255, 255, 255, 0.07);
+    }
+
+    .menu-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1400;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.3s ease, visibility 0.3s;
+    }
+
+    .menu-toggle:checked ~ .menu-backdrop {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
 
     .menu-toggle:checked ~ .menu {
-        display: flex;
+        transform: translateX(0);
+        visibility: visible;
+        pointer-events: auto;
     }
 }
 
@@ -191,12 +265,14 @@ section {
     text-align: center;
     min-height: 100vh;
     scroll-margin-top: 80px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: center;
 }
 
 .titulo-seccion {
     text-align: center;
     font-size: 3rem;
-    margin-top: 80px;
     color: #fefefe;
     z-index: 1;
     position: relative;
@@ -215,6 +291,13 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 769px) {
+    #sobre-mi {
+        padding-top: 130px;
+        scroll-margin-top: 0;
+    }
 }
 
 .fondo-difuminado::before {
@@ -362,15 +445,17 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     /* FIX: padding reducido para que no desborde en móvil */
     padding: 2rem 0;
-    max-width: 900px;
+    max-width: 1250px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .tarjeta {
-    width: 300px;
+    /* 4 tarjetas por fila: (100% - 3 espacios de 1.5rem) / 4 */
+    width: calc((100% - 4.5rem) / 4);
     min-height: 340px;
     border-radius: 20px;
     background-color: var(--glass);
@@ -472,6 +557,39 @@ section {
     border-style: dashed;
 }
 
+/* Efecto de foco + zoom de imagen (solo en dispositivos con mouse) */
+.tarjeta {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+
+.tarjeta .image {
+    transition: transform 0.5s ease;
+}
+
+@media (hover: hover) {
+    .contenedor-proyectos:hover > .tarjeta:not(:hover) {
+        filter: brightness(0.6) saturate(0.6) blur(2px);
+    }
+
+    .tarjeta:hover .image {
+        transform: scale(1.06);
+    }
+}
+
+/* Tags de ciberseguridad en azul */
+.tarjeta-tag.ciber {
+    background: rgba(29, 154, 242, 0.12);
+    color: #6ec6ff;
+    border-color: rgba(29, 154, 242, 0.3);
+}
+
+/* Pantallas medianas: 2 tarjetas por fila */
+@media screen and (max-width: 1100px) {
+    .tarjeta {
+        width: calc((100% - 1.5rem) / 2);
+    }
+}
+
 /* FIX RESPONSIVE PROYECTOS */
 @media screen and (max-width: 768px) {
     .contenedor-proyectos {
@@ -503,6 +621,7 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.25rem;
     max-width: 900px;
+    width: 100%;
     margin: 40px auto 0;
     text-align: left;
 }
@@ -585,7 +704,22 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     max-width: 900px;
+    width: 100%;
     margin: 40px auto 0;
+}
+
+.cert-categoria {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: #6ec6ff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* la grilla que sigue a cada subtítulo queda más pegada a él */
+.cert-categoria + .cert-grid {
+    margin-top: 20px;
 }
 
 .cert-item {
@@ -593,6 +727,7 @@ section {
     overflow: hidden;
     border-radius: 6px;
     display: block;
+    width: 100%;
     aspect-ratio: 4 / 3;
 }
 
@@ -646,6 +781,23 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+@media (min-width: 769px) {
+    #certificados {
+        padding-top: 130px;
+        padding-bottom: 40px;
+        scroll-margin-top: 0;
+    }
+
+    #certificados h2 {
+        margin-bottom: 10px;
+    }
+
+    #certificados .cert-grid {
+        max-width: 700px;
+    }
+}
+
 /* ============================================================
    SECCIÓN 4 – CONTACTO
    ============================================================ */
@@ -706,7 +858,7 @@ section {
     font-size: 15px;
     font-weight: 600;
     color: #fefefe;
-    word-break: break-word; /* ← nuevo */
+    word-break: break-word;
 }
 
 .info-valor.disponible {
@@ -718,7 +870,7 @@ section {
     text-decoration: none;
     font-size: 14px;
     transition: color 0.2s;
-    word-break: break-all; /* ← nuevo */
+    word-break: break-all;
 }
 
 .email-link:hover {
@@ -764,6 +916,7 @@ section {
         gap: 20px;
     }
 }
+
 /* ============================================================
    FOOTER
    ============================================================ */
